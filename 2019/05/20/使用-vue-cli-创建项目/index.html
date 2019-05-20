@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>使用 vue-cli 创建项目 | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。">
+  <meta name="description" content="学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。 安装npm 从node.js官网(https://nodejs.org/en/) 下载并安装node，安装过程很简单，一直点下一步就ok了，安装完之后，我们通过打开命令行工具（win+R）,输入node -v 命令，查看node的版本，若出现相应的版本号，则说明你安装成功了。 你可以根据不同平台系统选择你需要的Nod">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 vue-cli 创建项目">
 <meta property="og:url" content="http://yoursite.com/2019/05/20/使用-vue-cli-创建项目/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。">
+<meta property="og:description" content="学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。 安装npm 从node.js官网(https://nodejs.org/en/) 下载并安装node，安装过程很简单，一直点下一步就ok了，安装完之后，我们通过打开命令行工具（win+R）,输入node -v 命令，查看node的版本，若出现相应的版本号，则说明你安装成功了。 你可以根据不同平台系统选择你需要的Nod">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-20T11:44:54.777Z">
+<meta property="og:updated_time" content="2019-05-20T12:29:50.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 vue-cli 创建项目">
-<meta name="twitter:description" content="学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。">
+<meta name="twitter:description" content="学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。 安装npm 从node.js官网(https://nodejs.org/en/) 下载并安装node，安装过程很简单，一直点下一步就ok了，安装完之后，我们通过打开命令行工具（win+R）,输入node -v 命令，查看node的版本，若出现相应的版本号，则说明你安装成功了。 你可以根据不同平台系统选择你需要的Nod">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -161,7 +161,187 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-使用-vue-cli-创建项目" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用 vue-cli 创建项目
+    </h1>
+  
+
+        
+        <a href="/2019/05/20/使用-vue-cli-创建项目/" class="archive-article-date">
+  	<time datetime="2019-05-20T11:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。</p>
+<h3 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h3><ol>
+<li>从node.js官网(<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a>) 下载并安装node，安装过程很简单，一直点下一步就ok了，安装完之后，我们通过打开命令行工具（win+R）,输入node -v 命令，查看node的版本，若出现相应的版本号，则说明你安装成功了。</li>
+<li>你可以根据不同平台系统选择你需要的Node.js安装包。</li>
+<li>npm包管理器，是集成在node中的，所以安装了node也就有了npm,直接输入 npm -v 命令，显示npm的版本信息。</li>
+</ol>
+<h3 id="安装vue-cli"><a href="#安装vue-cli" class="headerlink" title="安装vue-cli"></a>安装vue-cli</h3><ol>
+<li>npm install -g vue-cli / cnpm i -g vue-cli</li>
+<li>安装结束之后，使用vue -v查看vue的版本</li>
+</ol>
+<h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>选择项目所在的位置，通过命令行进入该目录或者直接在该目录中，右键，选择git bash here（没有的话请安装git）。</p>
+<p>使用脚手架安装项目： vue init webpack demo 项目是基于webpack的</p>
+<blockquote>
+<p>   Project name（工程名）:回车<br>Project description（工程介绍）：回车<br>Author：作者名<br>Vue build（是否安装编译器）:回车<br>Install vue-router（是否安装Vue路由）：回车<br>Use ESLint to lint your code（是否使用ESLint检查js代码）：n<br>Set up unit tests（安装单元测试工具）：n<br>Setup e2e tests with Nightwatch（是否安装端到端测试工具）：n<br>Should we run npm install for you after the project has been created? (recommended)：回车。</p>
+</blockquote>
+<p>启动项目</p>
+<blockquote>
+<p>进入项目目录：cd demo<br>安装项目所需要的依赖：npm install<br>启动项目：npm run dev</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/使用-vue-cli-创建项目/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装npm"><span class="toc-number">1.</span> <span class="toc-text">安装npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装vue-cli"><span class="toc-number">2.</span> <span class="toc-text">安装vue-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建vue项目"><span class="toc-number">3.</span> <span class="toc-text">创建vue项目</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
           </div>
         </div>
       </div>
