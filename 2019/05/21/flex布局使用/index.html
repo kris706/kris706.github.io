@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://vc706.cn">
-  <title>Archives: 2019/5 | Kris Blog</title>
+  <title>flex布局使用 | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小白一枚！">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kris Blog">
-<meta property="og:url" content="http://vc706.cn/archives/2019/05/index.html">
+  <meta name="description" content="用来记录下flex布局的使用，方便以后查阅！">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flex布局使用">
+<meta property="og:url" content="http://vc706.cn/2019/05/21/flex布局使用/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="前端小白一枚！">
+<meta property="og:description" content="用来记录下flex布局的使用，方便以后查阅！">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-21T04:48:24.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kris Blog">
-<meta name="twitter:description" content="前端小白一枚！">
+<meta name="twitter:title" content="flex布局使用">
+<meta name="twitter:description" content="用来记录下flex布局的使用，方便以后查阅！">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -156,36 +157,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-flex布局使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/21/flex布局使用/" class="archive-article-date">
-  	<time datetime="2019-05-21T03:46:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/21/flex布局使用/">flex布局使用</a>
+    <h1 class="article-title" itemprop="name">
+      flex布局使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/21/flex布局使用/" class="archive-article-date">
+  	<time datetime="2019-05-21T03:46:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>用来记录下flex布局的使用，方便以后查阅！</p>
+<a id="more"></a>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在 flex 中，有容器和项目之分，但也是相对的，假如说： div1 里有 div2 ，div2 里有 div3，而且他们都被定义为 flex 盒子：</p>
+<blockquote>
+<p>div1 相对于 div2 来说就是容器，div2 相对于 div1 来说就是项目<br>div2 相对于 div3 来说就是容器，div3 相对于 div2 来说就是项目</p>
+</blockquote>
+<p>这里的 div2 ，既是容器也是项目，取决于他的相对位置是谁。</p>
+<h3 id="对弹性盒子的定义"><a href="#对弹性盒子的定义" class="headerlink" title="对弹性盒子的定义"></a>对弹性盒子的定义</h3><p>一般来说，只要父级被定义了display:flex;那么父级元素和里面的子集元素都会被定义为弹性盒子，孙子级别的标签却不会，如果想要成为弹性盒子，则需要在对应的子级元素上定义display:flex;</p>
+<h3 id="写在容器上的属性"><a href="#写在容器上的属性" class="headerlink" title="写在容器上的属性"></a>写在容器上的属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-direction</span><span class="selector-attr">[row | row-reverse | column | column-reverse]</span></span><br><span class="line">  <span class="comment">/* row（默认值）：主轴为水平方向，起点在左端。 */</span></span><br><span class="line">  <span class="comment">/* row-reverse：主轴为水平方向，起点在右端。 */</span></span><br><span class="line">  <span class="comment">/* column：主轴为垂直方向，起点在上沿。 */</span></span><br><span class="line">  <span class="comment">/* column-reverse：主轴为垂直方向，起点在下沿。 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">css</span> <span class="selector-tag">flex-wrap</span><span class="selector-attr">[nowrap | wrap | wrap-reverse]</span></span><br><span class="line">  <span class="comment">/* nowrap（默认）：不换行 */</span></span><br><span class="line">  <span class="comment">/* wrap：换行，第一行在上方 */</span></span><br><span class="line">  <span class="comment">/* wrap-reverse：换行，第一行在下方 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-flow</span><span class="selector-attr">[&lt;flex-direction&gt; || &lt;flex-wrap&gt;]</span> <span class="comment">/*是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">justify-content</span><span class="selector-attr">[flex-start | flex-end | center | space-between | space-around]</span></span><br><span class="line">  <span class="comment">/* flex-start（默认值）：左对齐  */</span></span><br><span class="line">  <span class="comment">/* flex-end：右对齐  */</span></span><br><span class="line">  <span class="comment">/* center： 居中  */</span></span><br><span class="line">  <span class="comment">/* space-between：两端对齐，项目之间的间隔都相等。  */</span></span><br><span class="line">  <span class="comment">/* space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。  */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">align-items</span><span class="selector-attr">[flex-start | flex-end | center | baseline | stretch]</span></span><br><span class="line">  <span class="comment">/* flex-start：交叉轴的起点对齐。 */</span></span><br><span class="line">  <span class="comment">/* flex-end：交叉轴的终点对齐。 */</span></span><br><span class="line">  <span class="comment">/* center：交叉轴的中点对齐。 */</span></span><br><span class="line">  <span class="comment">/* baseline: 项目的第一行文字的基线对齐。 */</span></span><br><span class="line">  <span class="comment">/* stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">align-content</span><span class="selector-attr">[flex-start | flex-end | center | space-between | space-around | stretch]</span></span><br><span class="line">  <span class="comment">/* flex-start：与交叉轴的起点对齐。 */</span></span><br><span class="line">  <span class="comment">/* flex-end：与交叉轴的终点对齐。 */</span></span><br><span class="line">  <span class="comment">/* center：与交叉轴的中点对齐。 */</span></span><br><span class="line">  <span class="comment">/* space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。 */</span></span><br><span class="line">  <span class="comment">/* space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。 */</span></span><br><span class="line">  <span class="comment">/* stretch（默认值）：轴线占满整个交叉轴。 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="写在项目上的属性"><a href="#写在项目上的属性" class="headerlink" title="写在项目上的属性"></a>写在项目上的属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">order</span><span class="selector-attr">[Number]</span></span><br><span class="line"><span class="comment">/* 定义项目的排列顺序。数值越小，排列越靠前，默认为0。 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-grow</span><span class="selector-attr">[Number]</span></span><br><span class="line"><span class="comment">/* 定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-shrink</span><span class="selector-attr">[Number]</span></span><br><span class="line"><span class="comment">/* 定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-basis</span><span class="selector-attr">[&lt;length&gt; | auto]</span></span><br><span class="line"><span class="comment">/* 定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间，他的默认值为auto 即项目的本来大小 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex</span></span><br><span class="line"><span class="comment">/* 是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">align-self</span><span class="selector-attr">[auto | flex-start | flex-end | center | baseline | stretch]</span></span><br><span class="line"><span class="comment">/* auto:自动 */</span></span><br><span class="line"><span class="comment">/* flex-start：与交叉轴的起点对齐。 */</span></span><br><span class="line"><span class="comment">/* flex-end：与交叉轴的终点对齐。 */</span></span><br><span class="line"><span class="comment">/* center：与交叉轴的中点对齐。baseline ：与交叉轴两端对齐，轴线之间的间隔平均分布。 */</span></span><br><span class="line"><span class="comment">/* stretch（默认值）：轴线占满整个交叉轴。 */</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的瓜！希望这篇文字能给你带来帮助~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,58 +231,53 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/20/使用-vue-cli-创建项目/" class="archive-article-date">
-  	<time datetime="2019-05-20T11:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/20/使用-vue-cli-创建项目/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用 vue-cli 创建项目</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/20/使用-vue-cli-创建项目/">使用 vue-cli 创建项目</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
 
+  
 
           </div>
         </div>
@@ -270,8 +299,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
