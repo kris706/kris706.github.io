@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://vc706.cn">
-  <title>Archives: 2019 | Kris Blog</title>
+  <title>vue中watch和computed | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小白一枚！">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kris Blog">
-<meta property="og:url" content="http://vc706.cn/archives/2019/index.html">
+  <meta name="description" content="vue中的watch和computed属性，时常记乱，写一遍笔记记录下，不清楚的时候过来捋一捋。 computed定义就是类似于 Object.defineproperty 的get/set 的方法，get到属性通过一系列的计算在set出去。适用于多个属性通过计算得到一个新值，在渲染到页面。且computed 属性具有缓存功能，只有当依赖的属性值发生变化时才会执行，默认从缓存中读取。实际中 尽量只">
+<meta name="keywords" content="随笔,vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue中watch和computed">
+<meta property="og:url" content="http://vc706.cn/2019/05/22/vue中watch和computed/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="前端小白一枚！">
+<meta property="og:description" content="vue中的watch和computed属性，时常记乱，写一遍笔记记录下，不清楚的时候过来捋一捋。 computed定义就是类似于 Object.defineproperty 的get/set 的方法，get到属性通过一系列的计算在set出去。适用于多个属性通过计算得到一个新值，在渲染到页面。且computed 属性具有缓存功能，只有当依赖的属性值发生变化时才会执行，默认从缓存中读取。实际中 尽量只">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-22T09:37:14.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kris Blog">
-<meta name="twitter:description" content="前端小白一枚！">
+<meta name="twitter:title" content="vue中watch和computed">
+<meta name="twitter:description" content="vue中的watch和computed属性，时常记乱，写一遍笔记记录下，不清楚的时候过来捋一捋。 computed定义就是类似于 Object.defineproperty 的get/set 的方法，get到属性通过一系列的计算在set出去。适用于多个属性通过计算得到一个新值，在渲染到页面。且computed 属性具有缓存功能，只有当依赖的属性值发生变化时才会执行，默认从缓存中读取。实际中 尽量只">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -156,36 +157,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue中watch和computed" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/22/vue中watch和computed/" class="archive-article-date">
-  	<time datetime="2019-05-22T08:50:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/22/vue中watch和computed/">vue中watch和computed</a>
+    <h1 class="article-title" itemprop="name">
+      vue中watch和computed
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/22/vue中watch和computed/" class="archive-article-date">
+  	<time datetime="2019-05-22T08:50:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vue中的watch和computed属性，时常记乱，写一遍笔记记录下，不清楚的时候过来捋一捋。</p>
+<h1 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>就是类似于 Object.defineproperty 的get/set 的方法，get到属性通过一系列的计算在set出去。适用于多个属性通过计算得到一个新值，在渲染到页面。且computed 属性具有缓存功能，只有当依赖的属性值发生变化时才会执行，默认从缓存中读取。实际中 尽量只用 computed 的 get 属性，不到万不得已不要使用 set。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  firstName: <span class="string">'Foo'</span>,</span><br><span class="line">  lastName: <span class="string">'Bar'</span></span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  firstName: <span class="string">'Foo'</span>,</span><br><span class="line">  lastName: <span class="string">'Bar'</span></span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName：&#123;</span><br><span class="line">    <span class="keyword">get</span>()&#123;<span class="comment">//回调函数 当需要读取当前属性值是执行，根据相关数据计算并返回当前属性的值</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>(val)&#123;<span class="comment">//监视当前属性值的变化，当属性值发生变化时执行，更新相关的属性数据</span></span><br><span class="line">        <span class="comment">//val就是fullName的最新属性值</span></span><br><span class="line">        <span class="built_in">console</span>.log(val)</span><br><span class="line">        <span class="keyword">const</span> names = val.split(<span class="string">' '</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(names)</span><br><span class="line">        <span class="keyword">this</span>.firstName = names[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">this</span>.lastName = names[<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>watch是一个观察的动作，当需要在数据变化时执行异步或开销较大的操作时使用。例如通过监听到某一值的变化给后台发一个请求，这种情况computed就不能做到了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  firstName: <span class="string">'Foo'</span>,</span><br><span class="line">  lastName: <span class="string">'Bar'</span></span><br><span class="line">&#125;,</span><br><span class="line">watch: &#123;</span><br><span class="line">  firstName (newName, oldName) &#123; <span class="comment">//监听first的值，默认是不执行的，如果发生改变则会执行</span></span><br><span class="line">    <span class="keyword">this</span>.fullName = newName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  firstName: <span class="string">'Foo'</span>,</span><br><span class="line">  lastName: <span class="string">'Bar'</span></span><br><span class="line">&#125;,</span><br><span class="line">watch: &#123;</span><br><span class="line">  firstName: &#123;</span><br><span class="line">    handler (newName, oldName) &#123;</span><br><span class="line">      <span class="keyword">this</span>.fullName = newName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    immediate: <span class="literal">true</span> <span class="comment">//监听firstName 立即执行一次 handler 方法，如果不这样写是不会默认先执行的，只有在值改变的时候才会执行。</span></span><br><span class="line">  &#125;,</span><br><span class="line">  lastName: &#123;</span><br><span class="line">    handler (newName, oldName) &#123;</span><br><span class="line">      <span class="keyword">this</span>.fullName = newName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    immediate: <span class="literal">true</span> <span class="comment">//监听firstName 立即执行一次 handler 方法，如果不这样写是不会默认先执行的，只有在值改变的时候才会执行。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注： 上面代码也可实现fullName的拼装但是代码量太大，太复杂，所以并不适合使用watch , computed计算属性才适用！</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的瓜！希望这篇文字能给你带来帮助~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -201,96 +236,53 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/21/flex布局使用/" class="archive-article-date">
-  	<time datetime="2019-05-21T03:46:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/21/flex布局使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">flex布局使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/21/flex布局使用/">flex布局使用</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/20/使用-vue-cli-创建项目/" class="archive-article-date">
-  	<time datetime="2019-05-20T11:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/20/使用-vue-cli-创建项目/">使用 vue-cli 创建项目</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
 
+  
 
           </div>
         </div>
@@ -312,8 +304,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
