@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://vc706.cn">
-  <title>Kris Blog</title>
+  <title>生成ssh | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端小白一枚！">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kris Blog">
-<meta property="og:url" content="http://vc706.cn/index.html">
+  <meta name="description" content="今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生成ssh">
+<meta property="og:url" content="http://vc706.cn/2019/05/23/生成ssh/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="前端小白一枚！">
+<meta property="og:description" content="今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-23T10:20:28.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kris Blog">
-<meta name="twitter:description" content="前端小白一枚！">
+<meta name="twitter:title" content="生成ssh">
+<meta name="twitter:description" content="今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -156,16 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-生成ssh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-生成ssh" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/23/生成ssh/">生成ssh</a>
+    <h1 class="article-title" itemprop="name">
+      生成ssh
     </h1>
   
 
@@ -179,11 +178,41 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。</p>
-        
-          <!-- <a class="article-more-a" href="/2019/05/23/生成ssh/#more">more >></a> -->
-        
+<a id="more"></a>
+<h1 id="配置用户名和邮箱"><a href="#配置用户名和邮箱" class="headerlink" title="配置用户名和邮箱"></a>配置用户名和邮箱</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"liuxianan"</span><span class="comment">// 你的github用户名，非昵称</span></span><br><span class="line">$ git config --global user.email  <span class="string">"xxx@qq.com"</span><span class="comment">// 填写你的github注册邮箱</span></span><br></pre></td></tr></table></figure>
+<h1 id="检测用户名和邮箱的正确性"><a href="#检测用户名和邮箱的正确性" class="headerlink" title="检测用户名和邮箱的正确性"></a>检测用户名和邮箱的正确性</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<h1 id="创建SSH-一路回车"><a href="#创建SSH-一路回车" class="headerlink" title="创建SSH,一路回车"></a>创建SSH,一路回车</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
+<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
+<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub/码云上，这样当你链接GitHub/码云自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub/码云上。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的瓜！希望这篇文字能给你带来帮助~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -203,10 +232,6 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/23/生成ssh/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -214,234 +239,17 @@
   </div>
 </article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
   
-    <article id="post-vue中watch和computed" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/vue中watch和computed/">vue中watch和computed</a>
-    </h1>
   
-
-        
-        <a href="/2019/05/22/vue中watch和computed/" class="archive-article-date">
-  	<time datetime="2019-05-22T08:50:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>vue中的watch和computed属性，时常记乱，写一遍笔记记录下，不清楚的时候过来捋一捋。</p>
-        
-          <!-- <a class="article-more-a" href="/2019/05/22/vue中watch和computed/#more">more >></a> -->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/vue中watch和computed/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    <a href="/2019/05/22/vue中watch和computed/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue中watch和computed</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <article id="post-flex布局使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/21/flex布局使用/">flex布局使用</a>
-    </h1>
-  
+</nav>
 
-        
-        <a href="/2019/05/21/flex布局使用/" class="archive-article-date">
-  	<time datetime="2019-05-21T03:46:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用来记录下flex布局的使用，方便以后查阅！</p>
-        
-          <!-- <a class="article-more-a" href="/2019/05/21/flex布局使用/#more">more >></a> -->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/21/flex布局使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-使用-vue-cli-创建项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/20/使用-vue-cli-创建项目/">使用 vue-cli 创建项目</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/20/使用-vue-cli-创建项目/" class="archive-article-date">
-  	<time datetime="2019-05-20T11:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>学习使用 vue-cli 脚手架搭建vue项目，并作简单的记录以便以后使用查阅。</p>
-        
-          <!-- <a class="article-more-a" href="/2019/05/20/使用-vue-cli-创建项目/#more">more >></a> -->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/20/使用-vue-cli-创建项目/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -463,7 +271,11 @@
 
   
   
+  
 
+  
+
+  
 
           </div>
         </div>
@@ -484,8 +296,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
