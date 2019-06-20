@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://vc706.cn">
-  <title>生成ssh | Kris Blog</title>
+  <title>git使用 | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="日常工作中git常用指令总结！">
+<meta name="keywords" content="-git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生成ssh">
-<meta property="og:url" content="http://vc706.cn/2019/05/23/生成ssh/index.html">
+<meta property="og:title" content="git使用">
+<meta property="og:url" content="http://vc706.cn/2019/06/20/git使用/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。">
+<meta property="og:description" content="日常工作中git常用指令总结！">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T10:20:28.132Z">
+<meta property="og:updated_time" content="2019-06-20T06:21:30.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生成ssh">
-<meta name="twitter:description" content="今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。">
+<meta name="twitter:title" content="git使用">
+<meta name="twitter:description" content="日常工作中git常用指令总结！">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -157,34 +157,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-生成ssh" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      生成ssh
+      git使用
     </h1>
   
 
         
-        <a href="/2019/05/23/生成ssh/" class="archive-article-date">
-  	<time datetime="2019-05-23T09:33:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
+        <a href="/2019/06/20/git使用/" class="archive-article-date">
+  	<time datetime="2019-06-20T06:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在码云上创建了一个项目，要配置ssh，连接码云，无奈忘记了怎么生成ssh，只能问度娘，但是比较麻烦的是要看好几篇才能找到我想要的，因此出现了这篇文章记录下生成ssh的方法。</p>
+        <p>日常工作中git常用指令总结！</p>
 <a id="more"></a>
-<h1 id="配置用户名和邮箱"><a href="#配置用户名和邮箱" class="headerlink" title="配置用户名和邮箱"></a>配置用户名和邮箱</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"liuxianan"</span><span class="comment">// 你的github用户名，非昵称</span></span><br><span class="line">$ git config --global user.email  <span class="string">"xxx@qq.com"</span><span class="comment">// 填写你的github注册邮箱</span></span><br></pre></td></tr></table></figure>
-<h1 id="检测用户名和邮箱的正确性"><a href="#检测用户名和邮箱的正确性" class="headerlink" title="检测用户名和邮箱的正确性"></a>检测用户名和邮箱的正确性</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-<h1 id="创建SSH-一路回车"><a href="#创建SSH-一路回车" class="headerlink" title="创建SSH,一路回车"></a>创建SSH,一路回车</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
-<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
-<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub/码云上，这样当你链接GitHub/码云自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub/码云上。</p>
-
+<h3 id="git常用指令总结"><a href="#git常用指令总结" class="headerlink" title="git常用指令总结"></a>git常用指令总结</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git clone <span class="string">'项目ssh地址'</span>  <span class="comment">// 把项目从云端复制到本地</span></span><br><span class="line">$ git pull    <span class="comment">// 拉取项目</span></span><br><span class="line">$ git add .   <span class="comment">// 添加到本地仓库</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span>   <span class="comment">// 提交前修改的备注</span></span><br><span class="line">$ git push    <span class="comment">// 本地文件提交到远程仓库</span></span><br><span class="line">$ git branch  <span class="comment">//查看本地所有分支</span></span><br><span class="line">$ git checkout -b <span class="string">'分支名'</span>  <span class="comment">// 本地创建分支</span></span><br><span class="line">$ git push --<span class="keyword">set</span>-upstream origin 分支名  // 将新建的本地分支推送到远程仓库</span><br><span class="line">$ git status  // 查看当前所在分支</span><br></pre></td></tr></table></figure>
       
 
       
@@ -223,7 +218,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-git</a>
         		</li>
       		
 		</ul>
@@ -242,18 +237,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/24/vue搭建后台管理系统（一）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue搭建后台管理系统（一） -- 项目创建
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/22/vue中watch和computed/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue中watch和computed</div>
+    <a href="/2019/05/24/vue搭建后台管理系统（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue搭建后台管理系统（一） -- 项目创建</div>
       <i class="icon-circle-right"></i>
     </a>
   
