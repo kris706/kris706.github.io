@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://vc706.cn">
   <title>vue搭建后台管理系统（一） -- 项目创建 | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue3.6.2搭建一个后台管理系统，记录过程。">
+  <meta name="description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue搭建后台管理系统（一） -- 项目创建">
 <meta property="og:url" content="http://vc706.cn/2019/05/24/vue搭建后台管理系统（一）/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue3.6.2搭建一个后台管理系统，记录过程。">
+<meta property="og:description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T11:51:12.694Z">
+<meta property="og:updated_time" content="2019-09-11T03:03:39.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue搭建后台管理系统（一） -- 项目创建">
-<meta name="twitter:description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue3.6.2搭建一个后台管理系统，记录过程。">
+<meta name="twitter:description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -177,7 +177,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue3.6.2搭建一个后台管理系统，记录过程。</p>
+        <p>公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。</p>
 <a id="more"></a>
 <h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><ol>
 <li>node.js <a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></li>
@@ -392,6 +392,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">问题</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
