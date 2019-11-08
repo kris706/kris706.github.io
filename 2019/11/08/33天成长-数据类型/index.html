@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://vc706.cn">
-  <title>vue搭建后台管理系统（一） -- 项目创建 | Kris Blog</title>
+  <title>33天成长--数据类型 | Kris Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。">
-<meta name="keywords" content="vue">
+  <meta name="description" content="33天JS成长计划第一天 – 数据类型">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue搭建后台管理系统（一） -- 项目创建">
-<meta property="og:url" content="http://vc706.cn/2019/05/24/vue搭建后台管理系统（一）/index.html">
+<meta property="og:title" content="33天成长--数据类型">
+<meta property="og:url" content="http://vc706.cn/2019/11/08/33天成长-数据类型/index.html">
 <meta property="og:site_name" content="Kris Blog">
-<meta property="og:description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。">
+<meta property="og:description" content="33天JS成长计划第一天 – 数据类型">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-11T03:03:39.366Z">
+<meta property="og:updated_time" content="2019-11-08T03:24:53.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue搭建后台管理系统（一） -- 项目创建">
-<meta name="twitter:description" content="公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。">
+<meta name="twitter:title" content="33天成长--数据类型">
+<meta name="twitter:description" content="33天JS成长计划第一天 – 数据类型">
   
     <link rel="alternative" href="/atom.xml" title="Kris Blog" type="application/atom+xml">
   
@@ -157,52 +157,103 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue搭建后台管理系统（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="w-33天成长-数据类型" class="article article-type-w " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vue搭建后台管理系统（一） -- 项目创建
+      33天成长--数据类型
     </h1>
   
 
         
-        <a href="/2019/05/24/vue搭建后台管理系统（一）/" class="archive-article-date">
-  	<time datetime="2019-05-24T10:39:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
+        <a href="/2019/11/08/33天成长-数据类型/" class="archive-article-date">
+  	<time datetime="2019-11-08T02:34:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>公司后台管理系统改版升级，原来是用angularjs做的，坑太多太麻烦，这次我选择使用vue-cli 3.6.2搭建一个后台管理系统，记录过程。</p>
+        <p>33天JS成长计划第一天 – 数据类型</p>
 <a id="more"></a>
-<h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><ol>
-<li>node.js <a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a></li>
-<li>更新npm到最新版本</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>升级vue到3.0 以上</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g @vue/cli</span><br></pre></td></tr></table></figure>
+<h1 id="请简述JS中有哪些数据类型"><a href="#请简述JS中有哪些数据类型" class="headerlink" title="请简述JS中有哪些数据类型"></a>请简述JS中有哪些数据类型</h1><ul>
+<li>原始类型</li>
+</ul>
 <blockquote>
-<p>注：如果有问题请先卸载全局vue 并删除 C:\Users\计算机名\AppData\Roaming 下的 npm-cache 文件夹<br>卸载vue-cli 指令：npm uninstall -g vue-cli</p>
+<p>String , Number , Boolean , Undefined , Null , Symbol , Bigint</p>
 </blockquote>
-<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>在项目所在文件夹下使用cmd指令工具输入下面指令</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create <span class="string">'项目名称'</span></span><br></pre></td></tr></table></figure>
-<p>选择手动选择功能<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset:</span><br><span class="line">  <span class="keyword">default</span>(babel,eslint)  <span class="comment">//默认只提供babel和eslint支持</span></span><br><span class="line">&gt; Manually select features</span><br></pre></td></tr></table></figure></p>
-<p>回车后出现功能选择界面，使用上下键移动，使用空格键来选择，我选择使用 Babel/Router/Vues/Css Pre-processors/Linter/Formatter<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project:</span><br><span class="line"> (*) Babel                               <span class="comment">// 支持es6 转换 es5</span></span><br><span class="line"> ( ) TypeScript                          <span class="comment">// 支持使用 TypeScript 书写源码</span></span><br><span class="line"> ( ) Progressive Web App (PWA) Support   <span class="comment">// PWA 支持</span></span><br><span class="line"> (*) Router                              <span class="comment">// 支持 vue-router</span></span><br><span class="line"> (*) Vuex                                <span class="comment">// 支持 vuex</span></span><br><span class="line"> (*) CSS Pre-processors                  <span class="comment">// 支持 CSS 预处理器</span></span><br><span class="line">&gt;(*) Linter / Formatter                  <span class="comment">// 支持代码风格检查和格式化</span></span><br><span class="line"> ( ) Unit Testing                        <span class="comment">// 支持单元测试</span></span><br><span class="line"> ( ) E2E Testing                         <span class="comment">// 支持 E2E 测试</span></span><br></pre></td></tr></table></figure></p>
-<p>选择完使用功能后回车进入下一界面，配置功能。第一项配置vue-router 的 mode ，是否使用 history 模式，我选择使用history模式。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Vuex, CSS Pre-processors, Linter</span><br><span class="line">? Use history mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) (Y/n)</span><br></pre></td></tr></table></figure></p>
-<p>接下来选择css预编辑语言,根据自己的使用习惯选择预编辑语言，我使用less。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Vuex, CSS Pre-processors, Linter</span><br><span class="line">? Use history mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by <span class="keyword">default</span>):</span><br><span class="line">  Sass/SCSS (<span class="keyword">with</span> dart-sass)</span><br><span class="line">  Sass/SCSS (<span class="keyword">with</span> node-sass)</span><br><span class="line">&gt; Less</span><br><span class="line">  Stylus</span><br></pre></td></tr></table></figure></p>
-<p>接着选择代码风格检验工具,我选择 ESLint + Standard config，如果选择了ESLint + Prettier，则 Prettier 的校验方式要和 VSCode 中的保持一致<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Vuex, CSS Pre-processors, Linter</span><br><span class="line">? Use history mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by <span class="keyword">default</span>): Less</span><br><span class="line">? Pick a linter / formatter config:</span><br><span class="line">  ESLint <span class="keyword">with</span> error prevention only</span><br><span class="line">  ESLint + Airbnb config</span><br><span class="line">&gt; ESLint + Standard config</span><br><span class="line">  ESLint + Prettier</span><br></pre></td></tr></table></figure></p>
-<p>选择每次保存时进行代码规则校验。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Vuex, CSS Pre-processors, Linter</span><br><span class="line">? Use history mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by <span class="keyword">default</span>): Less</span><br><span class="line">? Pick a linter / formatter config: Standard</span><br><span class="line">? Pick additional lint features: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)</span><br><span class="line">&gt;(*) Lint on save              <span class="comment">// </span></span><br><span class="line"> ( ) Lint and fix on commit</span><br></pre></td></tr></table></figure></p>
-<p>选择配置文件保存位置。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Vuex, CSS Pre-processors, Linter</span><br><span class="line">? Use history mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by <span class="keyword">default</span>): Less</span><br><span class="line">? Pick a linter / formatter config: Standard</span><br><span class="line">? Pick additional lint features: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)Lint on save</span><br><span class="line">? Where <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, PostCSS, ESLint, etc.? (Use arrow keys)</span><br><span class="line">&gt; In dedicated config files</span><br><span class="line">  In package.json</span><br></pre></td></tr></table></figure>
-<p>是否保存当前选择的配置，以便下次创建项目时使用。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Vuex, CSS Pre-processors, Linter</span><br><span class="line">? Use history mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by <span class="keyword">default</span>): Less</span><br><span class="line">? Pick a linter / formatter config: Standard</span><br><span class="line">? Pick additional lint features: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)Lint on save</span><br><span class="line">? Where <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, PostCSS, ESLint, etc.? In dedicated config files</span><br><span class="line">? Save <span class="keyword">this</span> <span class="keyword">as</span> a preset <span class="keyword">for</span> future projects? (y/N)</span><br></pre></td></tr></table></figure></p>
-<h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd 项目名称</span><br><span class="line"></span><br><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+<ul>
+<li>引用类型</li>
+</ul>
+<blockquote>
+<p>Object</p>
+</blockquote>
+<h1 id="null跟undefined的区别，使用场景"><a href="#null跟undefined的区别，使用场景" class="headerlink" title="null跟undefined的区别，使用场景"></a>null跟undefined的区别，使用场景</h1><p><strong>区别</strong></p>
+<blockquote>
+<p>Undefined：表示空值。Null：表示空对象。</p>
+</blockquote>
+<p><strong>使用场景</strong></p>
+<blockquote>
+<p><em>‘undefined’</em><br>1.变量被声明时，但没有赋值时，就等于undefined<br>2.调用函数时，应该提供的参数没有提供，该参数等于undefined<br>3.对象没有赋值的属性，该属性的值为undefined<br>4.函数没有返回值时，默认返回undefined<br><em>‘null’</em><br>1.作为对象原型链的终点<br>2.如果定义的变量准备在将来用于保存对象，此时可以将该变量初始化为null</p>
+</blockquote>
+<h1 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h1><blockquote>
+<p><code>isArray()</code> =&gt; Array.isArray()  方法用来判断一个值是否为数组。<br><code>valueOf()</code> =&gt; 返回数组本身<br><code>toString()</code> =&gt; 返回数组的字符串形式<br><code>push()</code> =&gt; 用于在数组的末端添加一个或多个元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组。<br><code>pop()</code> =&gt; 用于删除数组的最后一个元素，并返回该元素。注意，该方法会改变原数组。<br><code>shift()</code> =&gt; 用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组。<br><code>unshift()</code> =&gt; 用于在数组的第一个位置添加元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组。<br><code>join()</code> =&gt; 以参数作为分隔符，将所有数组成员组成一个字符串返回。如果不提供参数，默认用逗号分隔。<br><code>concat()</code> =&gt; 用于多个数组的合并。它将新数组的成员，添加到原数组成员的后部，然后返回一个新数组，原数组不变。<br><code>reverse()</code> =&gt; 用于颠倒数组中元素的顺序，返回改变后的数组。注意，该方法将改变原数组。<br><code>slice()</code> =&gt; 用于提取原数组的一部分，返回一个新数组，原数组不变。如果slice方法的参数是负数，则表示倒数计算的位置。如果参数值大于数组成员的个数，或者第二个参数小于第一个参数，则返回空数组。<br><code>splice()</code> =&gt; 用于删除原数组的一部分成员，并可以在被删除的位置添加入新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。splice的第一个参数是删除的起始位置，第二个参数是被删除的元素个数。如果后面还有更多的参数，则表示这些就是要被插入数组的新元素。<br><code>sort()</code> =&gt; 对数组成员进行排序，默认是按照字典顺序排序。排序后，原数组将被改变。<br><code>map()</code> =&gt; 对数组的所有成员依次调用一个函数，根据函数结果返回一个新数组。map方法接受一个函数作为参数。该函数调用时，map方法会将其传入三个参数，分别是当前成员、当前位置和数组本身。<br><code>filter()</code> =&gt; 参数是一个函数，所有数组成员依次执行该函数，返回结果为true的成员组成一个新数组返回。该方法不会改变原数组。<br><code>forEach()</code> =&gt; 与map方法很相似，也是遍历数组的所有成员，执行某种操作，但是forEach方法一般不返回值，只用来操作数据。如果需要有返回值，一般使用map方法。forEach方法的参数与map方法一致，也是一个函数，数组的所有成员会依次执行该函数。它接受三个参数，分别是当前位置的值、当前位置的编号和整个数组。<br><code>reduce()，reduceRight()</code> =&gt; 依次处理数组的每个成员，最终累计为一个值。reduce：是从左到右处理（从第一个成员到最后一个成员）reduceRight：则是从右到左（从最后一个成员到第一个成员），其他完全一样。<br><code>some()，every()</code> =&gt; 这两个方法类似“断言”（assert），用来判断数组成员是否符合某种条件。它们接受一个函数作为参数，所有数组成员依次执行该函数，返回一个布尔值。该函数接受三个参数，依次是当前位置的成员、当前位置的序号和整个数组。some方法是只要有一个数组成员的返回值是true，则整个some方法的返回值就是true，否则false。<br><code>includes()</code> =&gt; 数组实例的 方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似</p>
+</blockquote>
+<h1 id="字符串常用方法"><a href="#字符串常用方法" class="headerlink" title="字符串常用方法"></a>字符串常用方法</h1><blockquote>
+<p><code>String.fromCharCode()</code> =&gt; 该方法的参数是一系列Unicode码点，返回对应的字符串。<br><code>charAt()</code> =&gt; 返回指定位置的字符，参数是从0开始编号的位置。<br><code>charCodeAt()</code> =&gt; 返回给定位置字符的Unicode码点（十进制表示），相当于String.fromCharCode()的逆操作。<br><code>concat()</code> =&gt; 用于连接两个字符串，返回一个新字符串，不改变原字符串。<br><code>slice()</code> =&gt; 用于从原字符串取出子字符串并返回，不改变原字符串。它的第一个参数是子字符串的开始位置，第二个参数是子字符串的结束位置（不含该位置）。<br><code>substring()</code> =&gt; 用于从原字符串取出子字符串并返回，不改变原字符串。它与slice作用相同，但有一些奇怪的规则，因此不建议使用这个方法，优先使用slice。此方法的第一个参数表示子字符串的开始位置，第二个位置表示结束位置。<br><code>substr()</code> =&gt; 用于从原字符串取出子字符串并返回，不改变原字符串。此方法的第一个参数是子字符串的开始位置，第二个参数是子字符串的长度。<br><code>indexOf()</code>，lastIndexOf() =&gt; 这两个方法用于确定一个字符串在另一个字符串中的位置，都返回一个整数，表示匹配开始的位置。如果返回-1，就表示不匹配。两者的区别在于，indexOf从字符串头部开始匹配，lastIndexOf从尾部开始匹配。<br><code>trim()</code> =&gt; 用于去除字符串两端的空格，返回一个新字符串，不改变原字符串。<br><code>toLowerCase()</code>，toUpperCase() =&gt; toLowerCase方法用于将一个字符串全部转为小写，toUpperCase则是全部转为大写。它们都返回一个新字符串，不改变原字符串。<br><code>localeCompare()</code> =&gt; 用于比较两个字符串。它返回一个整数，如果小于0，表示第一个字符串小于第二个字符串；如果等于0，表示两者相等；如果大于0，表示第一个字符串大于第二个字符串。<br><code>match()</code> =&gt; 用于确定原字符串是否匹配某个子字符串，返回一个数组，成员为匹配的第一个字符串。如果没有找到匹配，则返回null。<br><code>search()</code> =&gt; 用法等同于match，但是返回值为匹配的第一个位置。如果没有找到匹配，则返回-1。<br><code>replace()</code> =&gt; 用于替换匹配的子字符串，一般情况下只替换第一个匹配（除非使用带有g修饰符的正则表达式）。<br><code>split()</code> =&gt; 按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组。</p>
+</blockquote>
+<h1 id="JS中如何判断一个值的类型"><a href="#JS中如何判断一个值的类型" class="headerlink" title="JS中如何判断一个值的类型"></a>JS中如何判断一个值的类型</h1><ul>
+<li>typeof</li>
+</ul>
+<blockquote>
+<p>只能判断 String，Number，Undefined，Symbol，Boolean，Function，对于引用类型的数据类型无法判断</p>
+</blockquote>
+<ul>
+<li>instanceof</li>
+</ul>
+<blockquote>
+<p>instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上,instanceof运算符只能用于对象，不适用原始类型的值</p>
+</blockquote>
+<ul>
+<li>Object.prototype.toString.call()</li>
+</ul>
+<blockquote>
+<p>判断任意类型</p>
+</blockquote>
+<h1 id="如何理解JS中的转换机制"><a href="#如何理解JS中的转换机制" class="headerlink" title="如何理解JS中的转换机制"></a>如何理解JS中的转换机制</h1><ul>
+<li>显式类型转换（强制类型转换）</li>
+</ul>
+<blockquote>
+<p>程序员显式调用Boolean(value)、Number(value)、String(value)完成的类型转换，叫做显示类型转换。</p>
+</blockquote>
+<ul>
+<li>隐式类型转换（自动类型转换）</li>
+</ul>
+<blockquote>
+<p>当js期望得到某种类型的值，而实际在那里的值是其他的类型，就会发生隐式类型转换。系统内部会自动调用我们前面说ToBoolean ( argument )、ToNumber ( argument )、ToString ( argument )，尝试转换成期望的数据类型。</p>
+</blockquote>
+<p>例子1：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( !<span class="literal">undefined</span></span><br><span class="line">  &amp;&amp; !<span class="literal">null</span></span><br><span class="line">  &amp;&amp; !<span class="number">0</span></span><br><span class="line">  &amp;&amp; !<span class="literal">NaN</span></span><br><span class="line">  &amp;&amp; !<span class="string">''</span></span><br><span class="line">) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'true'</span>);</span><br><span class="line">&#125; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>例子1：因为在if的括号中，js期望得到boolean的值，所以对括号中每一个值都使用ToBoolean ( argument )，将它们转化成boolean。</p>
+<p>例子2：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> * &#123; <span class="attr">valueOf</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">5</span> &#125; &#125;;  <span class="comment">//15</span></span><br></pre></td></tr></table></figure>
+<p>例子2：因为在乘号的两端，js期望得到number类型的值，所以对右边的那个对象使用ToNumber ( argument )，得到结果5，再与乘号左边的3相乘。</p>
+<p>例子3：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="function"><span class="keyword">function</span> <span class="title">returnObject</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> &#123;&#125; &#125;</span><br><span class="line">&gt; <span class="number">3</span> * &#123; <span class="attr">valueOf</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> &#123;&#125; &#125;, <span class="attr">toString</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> &#123;&#125; &#125; &#125;</span><br><span class="line"><span class="comment">// TypeError: Cannot convert object to primitive value</span></span><br></pre></td></tr></table></figure>
+<p>例子3：调用ToNumber ( argument )的过程中，调用了ToPrimitive ( input , Number )，因为在ToPrimitive中valueOf和toString都没有返回原始类型，所以抛出异常。</p>
+<p>符号’+’是一个比较棘手的一个符号，因为它既可以表示“算数加法”，也可以表示“字符串拼接”。<br>简单理解版本：只要’+’两端的任意一个操作数是字符串，那么这个’+’就表示字符串拼接，否则表示算数加法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span>+<span class="number">3</span></span><br><span class="line"><span class="comment">// 15</span></span><br><span class="line"><span class="number">12</span>+<span class="string">'3'</span></span><br><span class="line"><span class="comment">// "123"</span></span><br></pre></td></tr></table></figure>
+<p>原理理解版本：根据ECMAScript的定义，对’+’运算的求值按照以下过程：</p>
+<ol>
+<li>令lval = 符号左边的值，rval = 符号右边的值</li>
+<li>令lprim = ToPrimitive(lval)，rprim = ToPrimitive(rval)</li>
+<li>如果lprim和rprim中有任意一个为string类型，将ToString(lprim)和ToString(rprim)的结果做字符串拼接<br>否则，将ToNumber(lprim)和ToNumber(rprim)的结果做算数加法</li>
+</ol>
+<p>根据这个原理可以解释</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[]+[]</span><br><span class="line"><span class="comment">//  ""</span></span><br><span class="line"><span class="comment">// 提示：ToPrimitive([])返回空字符串</span></span><br><span class="line"></span><br><span class="line">[] + &#123;&#125;</span><br><span class="line"><span class="comment">//  "[object Object]"</span></span><br><span class="line"><span class="comment">//  提示：ToPrimitive(&#123;&#125;)返回"[object Object]"</span></span><br><span class="line"></span><br><span class="line"><span class="number">123</span> + &#123; <span class="attr">toString</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">"def"</span> &#125; &#125;</span><br><span class="line"><span class="comment">//  "123def"</span></span><br><span class="line"><span class="comment">//  提示：ToPrimitive(加号右边的对象)返回"def"</span></span><br><span class="line"></span><br><span class="line">&#123;&#125; + []</span><br><span class="line"><span class="comment">//  0</span></span><br><span class="line"><span class="comment">// 结果不符合我们的预期："[object Object]"</span></span><br><span class="line"><span class="comment">// 提示：在Chrome中，符号左边的&#123;&#125;被解释成了一个语句块，而不是一个对象</span></span><br><span class="line"><span class="comment">// 注意在别的执行引擎上可能会将&#123;&#125;解释成对象</span></span><br><span class="line"><span class="comment">//  这一行等价于'+[]'</span></span><br><span class="line"><span class="comment">// '+anyValue'等价于Number(anyValue)</span></span><br><span class="line"></span><br><span class="line">(&#123;&#125;) + []</span><br><span class="line"><span class="comment">//  "[object Object]"</span></span><br><span class="line"><span class="comment">// 加上括号以后，&#123;&#125;被解释成了一个对象，结果符合我们的预期了</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -241,7 +292,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -260,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/20/git使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/23/生成ssh/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">生成ssh</div>
+    <a href="/2019/09/20/分割数组/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分割数组</div>
       <i class="icon-circle-right"></i>
     </a>
   
